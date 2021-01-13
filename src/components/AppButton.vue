@@ -1,5 +1,7 @@
 <template>
-  <button class="btn primary" @click.prevent="$emit('press')" :disabled="disableButton" type="submit"><slot /></button>
+  <p>
+    <button class="btn primary" @click.prevent="$emit('press')" :disabled="disableButton" type="submit"><slot /></button>
+  </p>
 </template>
 
 <script>

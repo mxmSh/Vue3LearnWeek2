@@ -6,13 +6,14 @@
   </div>
 
   <div class="container">
-    <p>
-      <app-button @press="loadComments">Загрузить комментарии</app-button>
-    </p>
 
-    <app-comments-list :commetsList="comments" v-if="commentsFlag === 2"></app-comments-list>
-
+    <app-button v-if="commentsFlag === 0" @press="loadComments">Загрузить комментарии</app-button>
+    
     <app-loader v-else-if="commentsFlag === 1"></app-loader>
+
+    <app-comments-list :commetsList="comments" v-else></app-comments-list>
+
+    
 
   </div>
 </template>
